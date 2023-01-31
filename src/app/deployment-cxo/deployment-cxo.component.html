@@ -1,0 +1,134 @@
+<h2>CXO-View:-</h2>
+<div class="container">
+    <div class="row row-cols-1 row-cols-md-3">
+        <div class="col mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h4>Component on Board</h4>
+                    <canvas id="doughnut-Chart" height="310" width="400"></canvas>    
+                </div>    
+            </div>
+        </div>
+        <div class="col mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h4>Components deployed on Prod</h4>
+                    <h6 class="card-title">Avg. time taken per deployment:</h6>           
+                    <canvas id="doughnut-Chart2" height="240" width="400"></canvas>    
+                </div>    
+            </div>
+        </div>
+        <div class="col mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h4>Recent Prod deployments-Date</h4>
+                    <h6 class="card-title">Total time taken:</h6>            
+                    <canvas id="doughnut-Chart3" height="240" width="400"></canvas>    
+                </div>    
+            </div>
+        </div>
+        <div class="col mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h4>Total Environments integrated</h4>
+                    <canvas id="doughnut-Chart4" height="250" width="400"></canvas>    
+                </div>    
+            </div>
+        </div>
+        <div class="col mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h4>Prod Environments integrated</h4>
+                    <canvas id="doughnut-Chart5" height="250" width="400"></canvas>    
+                </div>    
+            </div>
+        </div>
+        <div class="col mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h4>Recent Prod Environments integrated-Date</h4>
+                    <canvas id="doughnut-Chart6" height="250" width="400"></canvas>    
+                </div>    
+            </div>
+        </div>
+        <div class="col mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h4>Deployment success rate</h4>
+                    <canvas id="doughnut-Chart7" height="270" width="400"></canvas>
+                </div>
+            </div>
+        </div>
+        <div class="col mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h4>Recent Prod Deployment success</h4>
+                    <canvas id="doughnut-Chart8" height="235" width="400"></canvas>
+                </div>
+            </div>
+        </div>
+        <div class="col mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h4>Rollbacks</h4>
+                    <canvas id="doughnut-Chart9" height="270" width="400"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <mat-form-field appearance="outline">
+                <mat-label>Most frequently deployed component</mat-label>
+                <input matInput matInput>
+            </mat-form-field>
+        </div>
+        <div class="col-6">
+            <mat-form-field appearance="outline">
+                <mat-label>Most frequently updated Node</mat-label>
+                <input matInput >
+            </mat-form-field>
+        </div>        
+    </div>
+    <section class="Table-container mat-elevation-z8" tabindex="0">
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+            <ng-container matColumnDef="name" sticky>
+                <th mat-header-cell *matHeaderCellDef> Component Name </th>
+                <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+            </ng-container>
+            <ng-container matColumnDef="enterprise">
+                <th mat-header-cell *matHeaderCellDef>Enterprise</th>
+                <td mat-cell *matCellDef="let element"> {{element.enterprise}}</td>
+            </ng-container>
+            <ng-container matColumnDef="rest1">
+                <th mat-header-cell *matHeaderCellDef> Rest-1 </th>
+                <td mat-cell *matCellDef="let element"> {{element.rest1}} </td>
+            </ng-container>
+            <ng-container matColumnDef="rest2">
+                <th mat-header-cell *matHeaderCellDef> Rest-2 </th>
+                <td mat-cell *matCellDef="let element"> {{element.rest2}} </td>
+            </ng-container>
+            <ng-container matColumnDef="rest3">
+                <th mat-header-cell *matHeaderCellDef> Rest-3 </th>
+                <td mat-cell *matCellDef="let element"> {{element.rest3}} </td>
+            </ng-container>
+            <ng-container matColumnDef="rest4">
+                <th mat-header-cell *matHeaderCellDef> Rest-4 </th>
+                <td mat-cell *matCellDef="let element"> {{element.rest4}} </td>
+            </ng-container>
+            <ng-container matColumnDef="rest5">
+                <th mat-header-cell *matHeaderCellDef> Rest-5 </th>
+                <td mat-cell *matCellDef="let element"> {{element.rest5}} </td>
+            </ng-container>
+            <ng-container matColumnDef="rest6">
+                <th mat-header-cell *matHeaderCellDef> Rest-6 </th>
+                <td mat-cell *matCellDef="let element"> {{element.rest6}} </td>
+            </ng-container>
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table> 
+    </section>
+    <br>
+</div>
+      
+
